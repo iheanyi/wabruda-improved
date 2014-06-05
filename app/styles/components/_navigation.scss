@@ -1,0 +1,36 @@
+nav {
+  height: 80px;
+  background: nth($colors, 4);
+  width: 100%;
+  position: fixed;
+  //bottom: 0;
+  z-index: 999;
+
+  .brand {
+    vertical-align: middle;
+    float: left;
+  }
+
+
+  .nav-items {
+    float: right;
+
+    ul {
+      display: block;
+      float: right;
+
+    li {
+      display: inline;
+      margin-right: 16px;
+      font-weight: 100;
+      font-size: golden-ratio(0.75em, 1);
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+  }
+
+}

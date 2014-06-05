@@ -1,0 +1,36 @@
+.mission {
+  @include background(url("../../images/bg/stardust.png"), repeat top);
+  //background-size: cover;
+  position: relative;
+}
+
+.quote {
+  //@include background(url("../../images/bg/triangular.png"), repeat top);
+  @include background(url("../../images/bg/stardust.png"), repeat top);
+  position: relative;
+}
+
+.test-bg {
+  background: #aaa;
+  background-size: cover;
+  @include position(absolute, 0px 0px 0px 0px);
+  @include background(url("../../images/bg/stardust.png"), repeat top);
+  //height: 150%;
+  //overflow: hidden;
+
+
+}
+
+blockquote {
+  @include fill-parent();
+}
+.author {
+  text-align: right;
+  float: right;
+  //float: right;
+}
+
+cite {
+  color: nth($colors, 1);
+  margin-top: 16px;
+}

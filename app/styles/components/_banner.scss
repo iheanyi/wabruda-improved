@@ -1,0 +1,46 @@
+
+.image-gradient {
+  $color-top: nth($colors, 1); // Brightest Yellow
+  $transparency-top: 0.6;
+  $color-bottom: nth($colors, 2); // Middle Yellow
+  $transparency-bottom: 0.6;
+  $vertical-angle: 60deg;
+
+  @include background(url("../../images/bg/top-bg-blur.png"), center no-repeat);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  min-height: 99vh;
+  height: 100vh;
+  z-index: 250;
+  img {
+    max-width: 100%;
+    width: 40%;
+    //height: auto;
+    //@include vertical-align();
+    //text
+  }
+
+  .copy {
+    @include vertical-align();
+    text-align: center;
+    z-index: 500;
+    /*position: absolute;
+    margin: auto;
+    text-align: center;
+    top: 7.5%;*/
+  }
+
+  .overlay {
+    @include linear-gradient($vertical-angle, transparentize($color-top, $transparency-top), transparentize($color-bottom, $transparency-bottom));
+    @include position(absolute, 0px 0px 0px 0px);
+    z-index: 250;
+    }
+}
+
+
+.new-bg {
+    @include background(url("../../images/bg/top-bg-blur.png"), center no-repeat);
+    background-size: cover;
+    @include position(absolute, 0px 0px 0px 0px);
+}

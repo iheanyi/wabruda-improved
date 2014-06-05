@@ -1,0 +1,29 @@
+// bower:scss
+@import "../../bower_components/bourbon/dist/_bourbon.scss";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
+// endbower
+//
+// Important: Reset.scss
+@import "libraries/reset";
+@import "libraries/mixins";
+
+// Attempting modularization :D
+@import "components/variables";
+@import "components/globals";
+@import "components/typography";
+@import "components/layout";
+@import "components/navigation";
+@import "components/banner";
+@import "components/quote";
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #fafafa;
+  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  //font: $roboto;
+  //font: 100% $roboto;
+}
+

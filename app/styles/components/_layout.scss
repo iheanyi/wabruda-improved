@@ -1,0 +1,71 @@
+/* _layout.scss
+
+SCSS file that handles the physical placement of elements within the website. Does not modify the appearance of any part of the site. */
+
+.section {
+  @include outer-container();
+  position: relative;
+  min-height: 100vh;
+  //height: auto;
+}
+
+.mission {
+  //min-height: 75vh;
+}
+.nav-section {
+  @include outer-container();
+}
+
+.quote-content {
+  @include span-columns(8);
+  @include shift(2);
+  /*position: absolute;
+  top: 40%;*/
+  //-webkit-transform-style: preserve-3d;
+
+  height: 100vh;
+  @include breakpoint($mobile) {
+    height: 100vh;
+    @include span-columns(6);
+    @include shift(0);
+  }
+}
+
+.mission-quote {
+  /*position: absolute;
+  top: 25%;
+  height: auto;*/
+  //height: 200px;
+}
+
+blockquote {
+  @include vertical-align();
+}
+
+.doctor-quote {
+  /*position: absolute;
+  top: 20%;
+  height: auto;*/
+}
+
+h1, p {
+  //@include vertical-align();
+}
+
+.content {
+  @include span-columns(10);
+  @include shift(1);
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+
+  @include media($mobile) {
+    @include span-columns(6);
+    height: 100vh;
+  }
+  //padding-top: 7.5%;
+  //position: absolute;
+}
+
+.vert-middle, .vert-middle h1, .vert-middle p {
+  @include vertical-align();
+}

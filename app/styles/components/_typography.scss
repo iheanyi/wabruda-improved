@@ -1,0 +1,29 @@
+body {
+  color: #fff;
+  font-size: 100% $roboto;
+}
+
+h1 {
+  font-size: golden-ratio(14px, 3);
+  text-align: center;
+  color: nth($colors, 1);
+  font-weight: 700;
+  padding-bottom: 10px;
+  //line-height: golden-ratio(22px, 2);
+}
+
+p {
+  font-size: golden-ratio(15px, 1);
+  line-height: golden-ratio(20px, 1);
+  font-weight: 100;
+}
+
+blockquote {
+  line-height: golden-ratio(20px,1);
+  font-size: golden-ratio(16px, 1);
+  font-weight: 100;
+  cite {
+    font-size: golden-ratio(14px, 1);
+    font-weight: 700;
+  }
+}

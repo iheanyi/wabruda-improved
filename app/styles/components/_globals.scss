@@ -1,0 +1,8 @@
+/* _globals.scss
+
+File responsible for global element styling, may affect multiple or all elements within the stylesheet. Also can place miscellaneous styling here.
+*/
+
+html, main, body, .default-bg {
+  background: nth($colors, 5);
+}
