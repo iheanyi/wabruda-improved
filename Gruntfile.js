@@ -228,12 +228,11 @@ module.exports = function (grunt) {
 
         // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
-
-            html: ['<%= config.dist %>/{,*/}*.html'],
-            css: ['<%= config.dist %>/styles/{,*/}*.css'],
             options: {
                 assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
             },
+            html: ['<%= config.dist %>/{,*/}*.html'],
+            css: ['<%= config.dist %>/styles/{,*/}*.css'],
         },
 
         // The following *-min tasks produce minified files in the dist folder
