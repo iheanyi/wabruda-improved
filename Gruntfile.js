@@ -1,4 +1,4 @@
-// Generated on 2014-06-03 using generator-webapp 0.4.9
+// Generated on 2014-05-25 using generator-webapp 0.4.9
 'use strict';
 
 // # Globbing
@@ -70,11 +70,11 @@ module.exports = function (grunt) {
         // The actual grunt server settings
         connect: {
             options: {
-                port: 9000,
+                port: 2020,
                 open: true,
                 livereload: 35729,
                 // Change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -152,7 +152,7 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 loadPath: [
-                    'bower_components'
+                    'bower_components',
                 ]
             },
             dist: {
@@ -244,7 +244,7 @@ module.exports = function (grunt) {
                     src: '{,*/}*.{gif,jpeg,jpg,png}',
                     dest: '<%= config.dist %>/images'
                 }]
-            }
+            },
         },
 
         svgmin: {
@@ -268,7 +268,7 @@ module.exports = function (grunt) {
                     removeEmptyAttributes: true,
                     removeOptionalTags: true,
                     removeRedundantAttributes: true,
-                    useShortDoctype: true
+                    useShortDoctype: true,
                 },
                 files: [{
                     expand: true,

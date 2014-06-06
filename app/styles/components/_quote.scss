@@ -6,7 +6,7 @@
 
 .quote {
   //@include background(url("../../images/bg/triangular.png"), repeat top);
-  @include background(url("../../images/bg/stardust.png"), repeat top);
+  @include background(url("../../images/stardust.png"), repeat top);
   position: relative;
 }
 
@@ -14,7 +14,7 @@
   background: #aaa;
   background-size: cover;
   @include position(absolute, 0px 0px 0px 0px);
-  @include background(url("../../images/bg/stardust.png"), repeat top);
+  @include background(url("../../images/stardust.png"), repeat top);
   //height: 150%;
   //overflow: hidden;
 
