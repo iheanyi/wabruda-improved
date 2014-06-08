@@ -1,14 +1,12 @@
 .mission {
   @include background(url("../images/stardust.png"), repeat top);
   position: relative;
-  background-attachment: fixed;
 }
 
 .quote {
   //@include background(url("../../images/bg/triangular.png"), repeat top);
   @include background(url("../images/stardust.png"), repeat top);
   position: relative;
-  background-attachment: fixed;
   //background-att
 }
 
