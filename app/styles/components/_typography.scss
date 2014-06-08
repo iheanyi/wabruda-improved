@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic,700|Roboto+Condensed:400);
+$lato: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 body {
   color: #fff;
-  font-size: 100% $roboto;
+  font: 100% $lato;
   text-rendering: optimizeLegibility;
 }
 
@@ -9,24 +11,26 @@ h1 {
   font-size: golden-ratio(12px, 3);
   text-align: center;
   color: nth($colors, 1);
-  font-weight: 700;
+  font-weight: 400;
   padding-bottom: 12px;
+  font-family: $roboto;
+  letter-spacing: 1px;
   //line-height: golden-ratio(22px, 2);
 }
 
 p {
   font-size: golden-ratio(15px, 1);
   //line-height: golden-ratio(20px, 1);
-  font-weight: 100;
+  font-weight: 300;
 }
 
 blockquote {
   line-height: golden-ratio(20px,1);
   font-size: golden-ratio(15px, 1);
-  font-weight: 100;
+  font-weight: 300;
   cite {
     font-size: golden-ratio(14px, 1);
-    font-weight: 700;
+    font-weight: 400;
   }
 }
 
@@ -40,7 +44,7 @@ h3 {
   font-weight: 700;
   font-size: golden-ratio(11px, 1);
   line-height: 24px;
-  letter-spacing: 0.3px
+  letter-spacing: 1px
 }
 
 .dotted-ul {
@@ -49,14 +53,14 @@ h3 {
 
 .footer-text {
   letter-spacing: 0.6px;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 a.name {
   border-bottom: 2px dotted nth($colors, 1);
   color: #fff;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
   //letter-spacing:
 

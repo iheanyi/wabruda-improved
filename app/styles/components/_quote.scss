@@ -1,60 +1,69 @@
 .mission {
   @include background(url("../images/stardust.png"), repeat top);
-  background-size: cover;
   position: relative;
+  background-attachment: fixed;
 }
 
 .quote {
   //@include background(url("../../images/bg/triangular.png"), repeat top);
   @include background(url("../images/stardust.png"), repeat top);
   position: relative;
+  background-attachment: fixed;
+  //background-att
 }
-
-.test-bg {
-  background: #aaa;
-  background-size: cover;
-  @include position(absolute, 0px 0px 0px 0px);
-  @include background(url("../images/stardust.png"), repeat top);
-  height: 100vh;
-  //height: 150%;
-  //overflow: hidden;
-
-
-}
-
 
 blockquote {
   @include fill-parent();
   //display: block;
   quotes: "“" "”" "‘" "’";
+  font-size: golden_ratio(1em, 2);
 
 }
 
 blockquote p {
   display: inline;
+  font-weight: 100;
 }
 
 blockquote:before {
     //quotes: "\201C""\201D""\2018""\2019";
     content: open-quote;
     margin-right: 0.2em;
-    font-size: 4em;
-    line-height: 0.1em;
+    font-size: 3em;
+    line-height: 0.2em;
     vertical-align: -0.4em;
     color: nth($colors, 1);
-
+    font-weight: 400;
 }
 
 blockquote:after {
   content: close-quote;
+  //padding-left: 0.2em;
   margin-left: 0.2em;
-  font-size: 4em;
-  //line-height: 0.1em;
+  font-size: 3em;
+  line-height: 0.2em;
   vertical-align: -0.5em;
   color: nth($colors, 1);
+  //font: sans-serif;
+  font-weight: 400;
+
 }
 
+.second:after {
+  content: close-quote;
+  font-size: 3em;
+  line-height: 0.2em;
+  vertical-align: -0.5em;
+  color: nth($colors, 1);
+  //font: sans-serif;
+  //float: right;
+  font-weight: 400;
+  margin-left: 0.01em;
 
+  @include media($small) {
+    float: none;
+  }
+}
 .author {
   text-align: right;
   float: right;
@@ -63,5 +72,9 @@ blockquote:after {
 
 cite {
   color: nth($colors, 1);
-  //margin-top: 12px;
+  padding: 0;
+  margin:0;
+  margin-top: 40px;
+  float: right;
+  clear: both;
 }
