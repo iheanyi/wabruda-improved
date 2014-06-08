@@ -5,8 +5,20 @@ $(document).ready(function() {
     console.log('\'Allo \'Allo!');
 
     $.stellar();
-    $('#nav-menu').onePageNav();
 
+    /*$('responsive-menu-button').sidr( {
+        name: 'sidr-main',
+        source: '#navigation'
+    });*/
+
+    $('#nav-menu').onePageNav();
+    $.shifter();
+
+    //$('nav').naver();
+
+    //var nav = responsiveNav('.nav-collapse');
+
+    //console.log(nav);
     $('a[href=\'#\']').click(function() {
         //$('.brand').scrollTo();
         $('html, body').animate({ scrollTop: 0 }, 'slow', function() {

@@ -9,5 +9,8 @@
     "jquery.stellar": "~0.6.2",
     "modernizer": "~2.8.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "jquery": "~1.11.0"
+  }
 }

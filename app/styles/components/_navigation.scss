@@ -4,11 +4,17 @@ header {
   width: 100%;
   position: fixed;
   z-index: 999;
-
 }
 
+/*#mobile-header {
+  display: none;
+  @include media($mobile) {
+    display: block;
+  }
+}*/
+
 .brand-block {
-  @include span-columns(4);
+  @include span-columns(2);
   display: inline;
   letter-spacing: 1px;
   line-height: 100px;
@@ -27,6 +33,10 @@ header {
   //line-height: 50px;
   //display: inline-block;
   font-weight: 400;
+
+  @include media($mobile) {
+    display: block;
+  }
 
   img {
     display: inline-block;
@@ -51,7 +61,7 @@ header {
 
 nav {
   //  @extend .clearfix;
-  @include span-columns(8);
+  @include span-columns(12);
   display: block;
   line-height: 100px;
   width: 50%;

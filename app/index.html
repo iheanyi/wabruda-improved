@@ -4,15 +4,17 @@
         <meta charset="utf-8">
         <title>Wabruda</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="shortcut icon" href="/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
+        <!--<link rel='stylesheet' href="/bower_components/responsive-nav/responsive-nav.css">-->
+
+        <!--<link rel="stylesheet" href="../bower_components/Naver/jquery.fs.naver.css">-->
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
-        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,400italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -25,13 +27,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header class="header">
-          <div class="nav-section">
+
+          <!--<div id="mobile-header">
+            <a id="responsive-menu-button" href="#sidr-main">Menu</a>
+          </div>-->
+
+          <div id="navigation" class="nav-section">
             <div class="brand-block">
             <!--<img src="images/wabruda-logo.png" height="80" width="80">-->
             <h2 class="brand"><a class="" href="#">Wabruda</a></h2>
             <!--<span><a class="brand" href="#">Wabruda</a></span>-->
             </div>
-          <nav class="nav" role="navigation">
+
+          <nav class="nav nav-collapse" role="navigation">
                 <ul id="nav-menu" class="menu">
                   <li class="menu__item"><a href="#mission">our mission</a></li>
                   <li class="menu__item"><a href="#about">what we do</a></li>
@@ -155,7 +163,9 @@
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/jquery.stellar/jquery.stellar.js"></script>
         <script src="../bower_components/jQuery-One-Page-Nav/jquery.nav.js"></script>
-        <script src="../bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="../bower_components/Shifter/jquery.fs.shifter.js"></script>
+        <!--<script src="../bower_components/sidr/jquery.sidr.min.js"></script>-->
+        <!--<script src="//cdnjs.cloudflare.com/ajax/libs/responsive-nav.js/1.0.32/responsive-nav.min.js"></script>-->
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -172,5 +182,10 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script>
+          //var nav = responsiveNav(".nav-collapse");
+        </script>
+
 </body>
 </html>

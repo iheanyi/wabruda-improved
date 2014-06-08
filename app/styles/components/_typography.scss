@@ -5,6 +5,14 @@ body {
   color: #fff;
   font: 100% $lato;
   text-rendering: optimizeLegibility;
+
+  @include media(max-width 40em) {
+    font-size: 90%;
+  }
+
+  @include media(max-width 30em) {
+    font-size: 80%;
+  }
 }
 
 h1 {
@@ -12,12 +20,16 @@ h1 {
   text-align: center;
   color: nth($colors, 1);
   font-weight: 400;
-  padding-bottom: 12px;
+  margin-bottom: 1.5em;
   font-family: $lato;
   letter-spacing: 1px;
   font-weight: 700;
-  line-height: 100px;
+  //line-height: 100px;
   //line-height: golden-ratio(22px, 2);
+  //
+  @include media($mobile) {
+
+  }
 }
 
 p {
@@ -27,11 +39,11 @@ p {
 }
 
 blockquote {
-  line-height: golden-ratio(20px,1);
-  font-size: golden-ratio(15px, 1);
+  //line-height: golden-ratio(20px,1);
+  //font-size: golden-ratio(15px, 1);
   font-weight: 300;
   cite {
-    font-size: golden-ratio(14px, 1);
+    //font-size: golden-ratio(14px, 1);
     font-weight: 400;
   }
 }
@@ -79,4 +91,30 @@ a.name {
 
   }
 
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+
+  @include media(max-width 50em) {
+    font-size: 2em;
+  }
+
+  @include media(max-width 40em) {
+    font-size: 1.5em;
+  }
+
+  @include media(max-width 30em) {
+    font-size: 1.5em;
+  }
+}
+
+p {
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
 }

@@ -12,10 +12,16 @@
 
 blockquote {
   @include fill-parent();
+  @include vertical-align();
   //display: block;
   quotes: "“" "”" "‘" "’";
-  font-size: golden_ratio(1em, 2);
+  //font-size: golden_ratio(1em, 2);
+  font-size: 1.2em;
+  padding-bottom: 3em;
 
+  @include media($mobile) {
+    clear: both;
+  }
 }
 
 blockquote p {
@@ -25,7 +31,6 @@ blockquote p {
 }
 
 blockquote:before {
-    //quotes: "\201C""\201D""\2018""\2019";
     content: open-quote;
     margin-right: 0.2em;
     font-size: 3em;
@@ -57,12 +62,13 @@ blockquote:after {
   //font: sans-serif;
   //float: right;
   font-weight: 400;
-  margin-left: 0.01em;
+  margin-left: 0.4em;
 
   @include media($small) {
     float: none;
   }
 }
+
 .author {
   text-align: right;
   float: right;
