@@ -16,6 +16,7 @@ h1 {
   font-family: $lato;
   letter-spacing: 1px;
   font-weight: 700;
+  line-height: 100px;
   //line-height: golden-ratio(22px, 2);
 }
 
@@ -64,7 +65,7 @@ footer a {
 }
 
 a.name {
-  border-bottom: 2px dotted nth($colors, 1);
+  border-bottom: 1px dotted nth($colors, 1);
   color: #fff;
   text-decoration: none;
   font-weight: 300;
