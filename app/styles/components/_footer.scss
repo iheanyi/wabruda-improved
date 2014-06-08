@@ -4,6 +4,28 @@ footer {
   width: 100%;
   clear: both;
   position: relative;
+
+  ul {
+    list-style-type:none;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        &:hover {
+          color: nth($colors, 1);
+        }
+      }
+    }
+  }
+
 }
 
 

@@ -1,7 +1,5 @@
 .brand {
-    display: inline;
-    vertical-align: middle;
-    width: 25%;
+    display: inline-block;
     clear: right;
     //width: 50%;
     //float: left;
@@ -21,22 +19,41 @@ header {
 .brand-block {
   @include span-columns(4);
   display: inline-block;
-  //width: 30%;
+  letter-spacing: 1px;
   float: left;
+  //display: inline-block;
+  //width: 30%;
+  //float: left;
   line-height: 100px;
+  vertical-align: middle;
 }
 
 .brand {
   @extend .clearfix;
+  display: inline;
+  vertical-align: middle;
+  clear: right;
+  //line-height: 100px;
+
   //display: block;
   //float: left;
   //line-height: 50px;
   //display: inline-block;
-  vertical-align: middle;
+  font-weight: 400;
+  img {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    //float: left;
+    margin: 0;
+    padding: 0;
+  }
 
   a {
     color: nth($colors, 1);
     text-decoration: none;
+    //line-height: 100px;
+    //line-height: 100px;
 
     &:hover {
       color: #fff;
