@@ -6,7 +6,7 @@
   $transparency-bottom: 0.6;
   $vertical-angle: 60deg;
 
-  @include background(url("../../images/bg/top-bg-blur.png"), center no-repeat);
+  @include background(url("../images/bg/top-bg-blur.png"), center no-repeat);
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
