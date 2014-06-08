@@ -1,36 +1,97 @@
-nav {
-  height: 80px;
+.brand {
+    display: inline;
+    vertical-align: middle;
+    width: 25%;
+    clear: right;
+    //width: 50%;
+    //float: left;
+}
+
+header {
   background: nth($colors, 4);
+  height: 100px;
   width: 100%;
   position: fixed;
-  //bottom: 0;
   z-index: 999;
 
-  .brand {
-    vertical-align: middle;
-    float: left;
+}
+
+.brand-block {
+  @include span-columns(4);
+  display: inline-block;
+  //width: 30%;
+  float: left;
+  line-height: 100px;
+}
+
+.brand {
+  @extend .clearfix;
+  //display: block;
+  //float: left;
+  //line-height: 50px;
+  //display: inline-block;
+  vertical-align: middle;
+
+  a {
+    color: nth($colors, 1);
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+    }
   }
+}
 
+nav {
+  @extend .clearfix;
+  @include span-columns(8);
+  display: block;
+  line-height: 100px;
+  width: 50%;
+  float: right;
+  font-variant: small-caps;
+  //text-transform: uppercase;
 
-  .nav-items {
-    float: right;
-
-    ul {
+  ul {
+      //@extend .clearfix;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
       display: block;
+      vertical-align: middle;
+      //text-align: right;
       float: right;
+      //float: right;
 
     li {
-      display: inline;
-      margin-right: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      //float: right;
+      margin-right: 24px;
       font-weight: 100;
       font-size: golden-ratio(0.75em, 1);
+      letter-spacing: 1px;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       a {
         color: #fff;
         text-decoration: none;
+
+        &:hover {
+          border-bottom: 1px dotted nth($colors, 1);
+        }
+      }
+
+      &.current {
+        a {
+          color : nth($colors, 1);
+        }
       }
     }
   }
-  }
 
 }
+

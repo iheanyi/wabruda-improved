@@ -1,6 +1,6 @@
 .mission {
   @include background(url("../images/stardust.png"), repeat top);
-  //background-size: cover;
+  background-size: cover;
   position: relative;
 }
 
@@ -22,9 +22,39 @@
 
 }
 
+
 blockquote {
   @include fill-parent();
+  //display: block;
+  quotes: "“" "”" "‘" "’";
+
 }
+
+blockquote p {
+  display: inline;
+}
+
+blockquote:before {
+    //quotes: "\201C""\201D""\2018""\2019";
+    content: open-quote;
+    margin-right: 0.2em;
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+    color: nth($colors, 1);
+
+}
+
+blockquote:after {
+  content: close-quote;
+  margin-left: 0.2em;
+  font-size: 4em;
+  //line-height: 0.1em;
+  vertical-align: -0.5em;
+  color: nth($colors, 1);
+}
+
+
 .author {
   text-align: right;
   float: right;
@@ -33,5 +63,5 @@ blockquote {
 
 cite {
   color: nth($colors, 1);
-  margin-top: 16px;
+  //margin-top: 12px;
 }

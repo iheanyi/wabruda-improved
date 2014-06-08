@@ -1,0 +1,32 @@
+footer {
+  height: 100px;
+  background: nth($colors, 4);
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+
+
+.footer-section {
+  display: block;
+  @include outer-container();
+}
+
+.footer_container {
+  @include outer_container();
+  @include outer_container();
+  height: 100px;
+}
+
+.copyright {
+  @include span-columns(6);
+  display: inline-block;
+  line-height: 100px;
+}
+
+.social-media {
+  @include span-columns(6);
+  display: inline-block;
+  line-height: 100px;
+  text-align: right;
+}

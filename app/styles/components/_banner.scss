@@ -6,13 +6,15 @@
   $transparency-bottom: 0.6;
   $vertical-angle: 60deg;
 
-  //@include background(url("../../images/bg/top-bg-blur.png"), center no-repeat);
+  @include background(url("../../images/bg/top-bg-blur.png"), center no-repeat);
   background-size: cover;
+  background-attachment: fixed;
   width: 100%;
   position: relative;
-  min-height: 99vh;
+  min-height: 100vh;
   height: 100vh;
   z-index: 250;
+
   img {
     max-width: 100%;
     width: 40%;
@@ -39,8 +41,8 @@
 }
 
 
-.new-bg {
+/*.new-bg {
     @include background(url('../images/top-bg-blur.png'), center no-repeat);
     background-size: cover;
     @include position(absolute, 0px 0px 0px 0px);
-}
+}*/

@@ -20,49 +20,41 @@
         <!-- endbuild -->
 
     </head>
-    <body>
+    <body id="#">
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-
-
-        <header class="">
-          <nav class="nav" role="navigation">
-            <div class="nav-section">
-              <div class="brand">
-                <!--<span>Wabruda</span>-->
-              </div>
-
-              <div class="nav-items">
-                <ul>
-                  <li><a href="#">Our Mission</a></li>
-                  <li><a href="#">What We Do</a></li>
-                  <li><a href="#">Who Can Join</a></li>
-                  <li><a href="#">Join Us</a></li>
-                </ul>
-              </div>
+        <header class="header">
+          <div class="nav-section">
+            <div class="brand-block">
+              <h2 class="brand"><a class="brand" href="#">Wabruda</a></h2>
             </div>
+          <nav class="nav" role="navigation">
+                <ul id="nav-menu" class="menu">
+                  <li class="menu__item"><a href="#mission">our mission</a></li>
+                  <li class="menu__item"><a href="#about">what we do</a></li>
+                  <li class="menu__item"><a href="#members">who can join</a></li>
+                  <li class="menu__item"><a href="#join">join us</a></li>
+                </ul>
           </nav>
+          </div>
+
         </header>
 
         <main>
-          <div id="title" class="slide banner image-gradient">
-            <div data-stellar-ratio="0.5" class="new-bg"></div>
-
+          <div data-stellar-background-ratio="1" id="title" class="slide banner image-gradient">
             <div class="copy">
-              <img data-stellar-ratio="2" src="images/logo-final-white.png" />
+              <img src="images/logo-final-white.png" />
             </div>
 
             <div class="overlay"></div>
           </div>
 
-          <div class="mission">
-            <div data-stellar-ratio="3" class="test-bg"></div>
+          <div id="mission" data-stellar-background-ratio="3" class="mission">
 
             <div class="section">
                 <div class="quote-content">
-                  <blockquote>The Wabruda is an organization based on brotherhood amongst African Americans. Through intellectual elevation, communal interaction and faith in God, we will strive to achieve social awareness and personal enlightenment.
+                  <blockquote><p>The Wabruda is an organization based on brotherhood amongst African Americans. Through intellectual elevation, communal interaction and faith in God, we will strive to achieve social awareness and personal enlightenment.</p>
 
                   <cite class="author">—The Wabruda Mission Statement</cite></blockquote>
               </div>
@@ -71,7 +63,7 @@
           </div>
 
 
-          <div class="about default-bg">
+          <div id="about" class="about default-bg">
             <div class="section">
 
             <div class="content">
@@ -86,7 +78,7 @@
           </div>
 
           <div class="quote">
-            <div data-stellar-ratio="5" class="test-bg"></div>
+            <div data-stellar-background-ratio="2" class="test-bg"></div>
             <div class="section">
               <div class="quote-content">
                 <blockquote>As members of the Wabruda, we aim to become critical consumers of our environment.
@@ -95,7 +87,7 @@
             </div>
           </div>
 
-          <div class="membership default-bg">
+          <div id="members" class="membership default-bg">
             <div class="section">
               <div class="content">
 
@@ -110,26 +102,53 @@
             </div>
           </div>
 
+          <div id="join" data-stellar-background-ratio="1.5" class="join default-bg">
+            <div class="section">
+              <div class="content">
+
+                <div class="vert-middle"><h1>Please Join Us</h1>
+
+                <p>Whether you're interested in coming to a meeting or want to check out a Wabruda sponsored event, we'd love to have you. Come hangout with your brothers and let's talk, enrich ourselves, and have fun.</p>
+
+                <div class="when-where">
+                  <div class="when"><span class="meeting-details"><span class="dotted-ul" >When</span>: Every Sunday @ 7:30 PM</span></div>
+
+                  <div class="where"> <span class="meeting-details"><span class="dotted-ul">Where</span>: Dooley Room, LaFortune, location may change.</span>
+
+                  </div>
+
+              </div>
+            </div>
+
+              </div>
+
+            </div>
+          </div>
+
         </main>
 
         <footer>
 
-        </footer>
-        <!--<div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
-            <li>Modernizr</li>
-          </ul>
-        </div>-->
+          <div class="footer-section">
+            <div class="copyright">
 
+            <span class="footer-text">Website &copy; Wabruda. Designed and coded by <span class="name"><a class="name" href="http://www.iheanyi.com">Iheanyi Ekechukwu</a></span>.</span>
+
+            </div>
+
+            <div class="social-media">
+            <span class="footer-text">Social Media Icons & E-Mail Go Here.</span>
+            </div>
+          </div>
+
+        </footer>
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/jquery.stellar/jquery.stellar.js"></script>
+        <script src="../bower_components/jQuery-One-Page-Nav/jquery.nav.js"></script>
+        <script src="../bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

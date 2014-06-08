@@ -6,12 +6,14 @@ SCSS file that handles the physical placement of elements within the website. Do
   @include outer-container();
   position: relative;
   min-height: 100vh;
+  z-index: 500;
   //height: auto;
 }
 
 .mission {
   //min-height: 75vh;
 }
+
 .nav-section {
   @include outer-container();
 }
@@ -24,7 +26,7 @@ SCSS file that handles the physical placement of elements within the website. Do
   //-webkit-transform-style: preserve-3d;
 
   height: 100vh;
-  @include breakpoint($mobile) {
+  @include media($mobile) {
     height: 100vh;
     @include span-columns(6);
     @include shift(0);
@@ -68,4 +70,18 @@ h1, p {
 
 .vert-middle, .vert-middle h1, .vert-middle p {
   @include vertical-align();
+}
+
+.when-where {
+  //@include outer-container();
+  //display: inline-block;
+}
+
+.when {
+  @include span-columns(5);
+}
+
+.where {
+  @include span-columns(7);
+  text-align: right;
 }
