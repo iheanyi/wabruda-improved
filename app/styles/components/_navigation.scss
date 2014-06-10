@@ -64,6 +64,14 @@ header {
   }
 }
 
+
+.hidden {
+  display: none;
+
+  @include media($mobile) {
+    display: inline;
+  }
+}
 .tinynav {
   display: none;
 }
@@ -83,6 +91,10 @@ header {
       height: 40px;
       -webkit-appearance: none;
       text-align: center;
+
+      option {
+        -webkit-appearance: none;
+      }
     }
     #nav-menu { display: none; }
   }
