@@ -1,5 +1,4 @@
 .join {
-  @include background(url('../images/tweed.png'), repeat top);
+  @include background(url('../images/tweed.png'), repeat center);
   position: relative;
-  background-attachment: fixed;
 }

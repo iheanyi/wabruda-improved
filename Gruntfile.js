@@ -35,7 +35,7 @@ module.exports = function (grunt) {
             },
             js: {
                 files: ['<%= config.app %>/scripts/{,*/}*.js'],
-                tasks: ['jshint'],
+                /*tasks: ['jshint'],*/
                 options: {
                     livereload: true
                 }
@@ -49,7 +49,8 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['sass:server', 'autoprefixer']
+                tasks: ['sass:server', 'autoprefixer'],
+                cacheLocation: '/tmp/.sass-cache'
             },
             styles: {
                 files: ['<%= config.app %>/styles/{,*/}*.css'],
@@ -153,7 +154,9 @@ module.exports = function (grunt) {
             options: {
                 loadPath: [
                     'bower_components',
-                ]
+                ],
+
+                cacheLocation: '/tmp/.sass-cache',
             },
             dist: {
                 files: [{
@@ -417,7 +420,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
+        /*'newer:jshint'*/,
         'test',
         'build'
     ]);

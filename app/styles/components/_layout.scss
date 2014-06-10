@@ -8,7 +8,9 @@ SCSS file that handles the physical placement of elements within the website. Do
   min-height: 100vh;
   z-index: 500;
   height: 100vh;
+  max-height: 150vh;
   @include media($mobile) {
+    height: 140vh;
     //min-height: 150vh;
   }
   //height: auto;
@@ -31,9 +33,11 @@ SCSS file that handles the physical placement of elements within the website. Do
   //-webkit-transform-style: preserve-3d;
 
   height: 100vh;
+  max-height: 150vh;
   @include media($mobile) {
     //height: 150vh;
     @include span-columns(6);
+    @include reset-display();
     @include shift(0);
   }
 }
@@ -63,18 +67,33 @@ h1, p {
   @include span-columns(10);
   @include shift(1);
   height: 100vh;
-  -webkit-transform-style: preserve-3d;
+  max-height: 150vh;
+  //-webkit-transform-style: preserve-3d;
 
   @include media($mobile) {
+    @include vertical-align;
+    //@include reset-display();
     @include span-columns(6);
-    height: 150vh;
+    //height: 150vh;
   }
   //padding-top: 7.5%;
   //position: absolute;
 }
 
-.vert-middle, .vert-middle h1, .vert-middle p {
-  @include vertical-align();
+.vert-middle, .vert-middle h1 {
+  @include vertical-align;
+}
+
+.vert-middle p {
+  @include vertical-align;
+
+  @include media($mobile) {
+    @include reset-display;
+    top: 0;
+    -webkit-transform: none;
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 .when-where {
@@ -84,9 +103,21 @@ h1, p {
 
 .when {
   @include span-columns(5);
+
+  @include media($mobile) {
+    @include fill-parent();
+    @include omega();
+  }
 }
 
 .where {
   @include span-columns(7);
-  text-align: right;
+  text-align: left;
+
+  @include media($mobile) {
+    @include fill-parent();
+    padding-top: 20px;
+  }
+
+
 }

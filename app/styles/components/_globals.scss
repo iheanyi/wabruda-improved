@@ -6,3 +6,7 @@ File responsible for global element styling, may affect multiple or all elements
 html, main, body, .default-bg {
   background: nth($colors, 5);
 }
+
+html {
+    -webkit-font-smoothing: subpixel-antialiased;
+}

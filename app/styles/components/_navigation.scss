@@ -4,6 +4,11 @@ header {
   width: 100%;
   position: fixed;
   z-index: 999;
+
+  @include media(max-width 900px ) {
+    padding-left: 16px;
+    padding-right: 24px;
+  }
 }
 
 /*#mobile-header {
@@ -23,7 +28,6 @@ header {
 }
 
 .brand {
-  @extend .clearfix;
   display: inline;
   vertical-align: middle;
   //line-height: 100px;
@@ -35,7 +39,8 @@ header {
   font-weight: 400;
 
   @include media($mobile) {
-    display: block;
+    display: inline;
+    padding-left: 16px;
   }
 
   img {
@@ -59,9 +64,32 @@ header {
   }
 }
 
+.tinynav {
+  display: none;
+}
+
+  @include media($mobile) {
+    .tinynav {
+      display: inline;
+      background: transparent;
+      padding: 8px;
+      border: 1px solid nth($colors, 1);
+      font-size: 16px;
+      font-weight: 100;
+      text-align: center;
+      text-transform: capitalize;
+      color: #fff;
+      box-shadow: 0;
+      height: 40px;
+      -webkit-appearance: none;
+      text-align: center;
+    }
+    #nav-menu { display: none; }
+  }
+
 nav {
   //  @extend .clearfix;
-  @include span-columns(12);
+  @include span-columns(10);
   display: block;
   line-height: 100px;
   width: 50%;
@@ -70,6 +98,11 @@ nav {
   vertical-align: middle;
   height: 100px;
   //text-transform: uppercase;
+  //
+  @include media(max-width 900px) {
+    font-size: 0.9em;
+
+  }
 
   ul {
       //@extend .clearfix;
@@ -87,6 +120,7 @@ nav {
       //float: right;
       margin-right: 24px;
       font-weight: 100;
+      -webkit-font-smoothing: subpixel-antialiased;
       font-size: golden-ratio(0.75em, 1);
       letter-spacing: 1px;
 

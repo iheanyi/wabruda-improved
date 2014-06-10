@@ -12,7 +12,10 @@ $(document).ready(function() {
     });*/
 
     $('#nav-menu').onePageNav();
-    $.shifter();
+    $('#nav-menu').tinyNav();
+    $('.tinynav').onePageNav({
+      currentClass: 'selected',
+    });
 
     //$('nav').naver();
 
