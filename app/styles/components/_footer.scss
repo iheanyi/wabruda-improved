@@ -7,7 +7,7 @@ footer {
   line-height: 1em;
 
   @include media($mobile) {
-    height: 400px;
+    height: 150px;
     padding: 16px;
   }
   footer span {
@@ -56,12 +56,12 @@ footer {
 .copyright {
   @include span-columns(6);
   display: inline-block;
-  line-height: 100px;
+  line-height: 2em;
 }
 
 .social-media {
   @include span-columns(6);
   display: inline-block;
-  line-height: 100px;
+  line-height: 2em;
   text-align: right;
 }
