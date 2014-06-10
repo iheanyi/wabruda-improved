@@ -20,7 +20,10 @@
     width: 40%;
     height: auto;
 
-    @include media($small) {
+    @incldue media($small) {
+      width: 100%;
+    }
+    @include media($mobile) {
       width: 95%;
 
     }
