@@ -1,0 +1,1 @@
+$(document).ready(function(){"use strict";console.log("'Allo 'Allo!"),$.stellar(),$("#nav-menu").onePageNav(),$("#nav-menu").tinyNav(),$(".tinynav").onePageNav({currentClass:"selected"}),$("a[href='#']").click(function(){$("html, body").animate({scrollTop:0},"slow",function(){$(this).after(function(){})}),console.log("LINK CLICKED")})});
