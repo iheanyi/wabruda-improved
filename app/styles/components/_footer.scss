@@ -56,12 +56,20 @@ footer {
 .copyright {
   @include span-columns(6);
   display: inline-block;
-  line-height: 2em;
+  line-height: 100px;
+
+  @include media($mobile) {
+    line-height: 2em;
+  }
 }
 
 .social-media {
   @include span-columns(6);
   display: inline-block;
-  line-height: 2em;
+  line-height: 100px;
   text-align: right;
+
+  @include media($mobile) {
+    line-height: 2em;
+  }
 }
