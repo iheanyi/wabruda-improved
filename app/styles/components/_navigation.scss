@@ -20,6 +20,7 @@ header {
 
 .brand-block {
   @include span-columns(2);
+  position: relative;
   display: inline;
   letter-spacing: 1px;
   line-height: 100px;
@@ -130,7 +131,7 @@ nav {
     li {
       display: inline;
       //float: right;
-      margin-right: 24px;
+      margin-right: 12px;
       font-weight: 100;
       -webkit-font-smoothing: subpixel-antialiased;
       font-size: golden-ratio(0.75em, 1);
@@ -138,6 +139,7 @@ nav {
 
       &:last-child {
         margin-right: 0;
+        clear: left;
       }
 
       a {
