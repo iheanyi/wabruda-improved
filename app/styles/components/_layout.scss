@@ -1,7 +1,9 @@
 /* _layout.scss
 
 SCSS file that handles the physical placement of elements within the website. Does not modify the appearance of any part of the site. */
-
+html, body {
+  height: 100%;
+}
 .section {
   @include outer-container();
   position: relative;
