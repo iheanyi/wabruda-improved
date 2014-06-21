@@ -4,11 +4,6 @@ header {
   width: 100%;
   position: fixed;
   z-index: 999;
-
-  @include media(max-width 900px ) {
-    padding-left: 16px;
-    padding-right: 24px;
-  }
 }
 
 /*#mobile-header {
@@ -19,19 +14,18 @@ header {
 }*/
 
 .brand-block {
-  @include span-columns(2);
-  position: relative;
-  display: inline;
+  @include span-columns(3);
+  display: inline-block;
   letter-spacing: 1px;
   line-height: 100px;
   height: 100px;
   vertical-align: middle;
-  padding-left: 12px;
 }
 
 .brand {
   display: inline;
   vertical-align: middle;
+  width: 100%;
   //line-height: 100px;
 
   //display: block;
@@ -66,19 +60,17 @@ header {
   }
 }
 
-
-.hidden {
-  display: none;
-
-  @include media($mobile) {
-    display: inline;
-  }
-}
 .tinynav {
   display: none;
 }
 
-  @include media(max-width 800px) {
+.hidden {
+  display: none;
+}
+  @include media($mobile) {
+    .hidden {
+      display: block;
+    }
     .tinynav {
       display: inline;
       background: transparent;
@@ -95,26 +87,29 @@ header {
       text-align: center;
 
       option {
-        -webkit-appearance: none;
+
       }
     }
     #nav-menu { display: none; }
   }
 
+.nav-section {
+  @include outer-container;
+}
+
 nav {
   //  @extend .clearfix;
-  @include span-columns(10);
-  display: block;
+  @include span-columns(9);
+  display: inline-block;
   line-height: 100px;
-  width: 50%;
   float: right;
   font-variant: small-caps;
   vertical-align: middle;
   height: 100px;
-  //text-transform: uppercase;
-  //
-  @include media(max-width 900px) {
-    font-size: 0.9em;
+
+  @include media($mobile) {
+    @include span-columns(4);
+    float: right;
   }
 
   ul {
@@ -130,8 +125,7 @@ nav {
 
     li {
       display: inline;
-      //float: right;
-      margin-right: 12px;
+      margin-right: 24px;
       font-weight: 100;
       -webkit-font-smoothing: subpixel-antialiased;
       font-size: golden-ratio(0.75em, 1);
@@ -139,7 +133,6 @@ nav {
 
       &:last-child {
         margin-right: 0;
-        clear: left;
       }
 
       a {

@@ -73,13 +73,20 @@ h1, p {
   //-webkit-transform-style: preserve-3d;
 
   @include media($mobile) {
-    @include vertical-align;
+    //@include vertical-align;
     //@include reset-display();
     @include span-columns(6);
     //height: 150vh;
   }
   //padding-top: 7.5%;
   //position: absolute;
+}
+
+.members {
+  @include media($mobile) {
+    @include vertical-align;
+    height: 150vh;
+  }
 }
 
 .vert-middle, .vert-middle h1 {
@@ -90,7 +97,7 @@ h1, p {
   @include vertical-align;
 
   @include media($mobile) {
-    @include reset-display;
+    //@include reset-display;
     top: 0;
     -webkit-transform: none;
     -ms-transform: translateY(0);
